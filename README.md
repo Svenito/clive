@@ -21,11 +21,15 @@ Requirements
 * six==1.10.0
 * websocket-client==0.35.0
 
+Installation
+============
+
+$> pip install clive
 
 Usage
 =====
 
-    $ ./clive.py wmk50bsm9vt3
+    $ clive wmk50bsm9vt3
 
 Where `wmk50bsm9vt3` is the last part of the live feed URL from Reddit.
 

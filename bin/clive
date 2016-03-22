@@ -1,0 +1,20 @@
+#!/bin/env python2.7
+
+import clive
+import sys
+
+"""Given a feed name will start a listening socket and print new posts
+   as they arrive. The name is the last part of the live feed URL:
+
+    https://www.reddit.com/live/wmk50bsm9vt3
+
+   in this case: wmk50bsm9vt3"""
+
+if len(sys.argv) < 2:
+    print ('You need to provide the name of the feed. Eg: wmk50bsm9vt3')
+    sys.exit(0)
+
+feed = sys.argv[1]
+
+cli = clive.Clive(feed)
+cli.run()
