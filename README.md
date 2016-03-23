@@ -1,5 +1,9 @@
 CLIVE
-#####
+=====
+
+[![PyPI](https://img.shields.io/pypi/l/Django.svg)](https://pypi.python.org/pypi/CLIve)
+[![PyPI](https://img.shields.io/pypi/v/nine.svg)](https://pypi.python.org/pypi/CLIve)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/binaryheadache)
 
 When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
@@ -12,7 +16,7 @@ welcome and encouraged.
 If you are wondering why *clive* it's a  blend of *cli* and *live*.
 
 Requirements
-============
+------------
 
 * Python 2.7 or 3.5
 * colorama==0.3.7
@@ -21,19 +25,19 @@ Requirements
 * websocket-client==0.35.0
 
 Installation
-============
+------------
 
 $> pip install clive
 
 Usage
-=====
+-----
 
     $ clive wmk50bsm9vt3
 
 Where `wmk50bsm9vt3` is the last part of the live feed URL from Reddit.
 
 License
-=======
+-------
 
 The MIT License (MIT)
 Copyright (c) 2016 Sven Steinbauer
