@@ -20,6 +20,7 @@ class Clive(object):
         self.feed_name = feed_name
         self.user_agent = 'CLI:clive by /u/tame_robot'
         self.quitting = False
+        self.reconnecting = False
         signal.signal(signal.SIGINT, self.signal_handler)
 
         self.title = ''
@@ -66,14 +67,17 @@ class Clive(object):
         """Socket expired, fetch a new one if we're not quitting
         Unfortunately the websockets expire after a while"""
         if not self.quitting:
+            self.reconnecting = True
             self.run()
 
     def on_open(self, socket):
-        print ('Connected. Press Ctrl+c twice to quit.\n')
-        print (colorama.Style.BRIGHT + self.title)
-        print (self.description + colorama.Style.RESET_ALL)
-        print ('Feed status is: %s' % self.state)
-
+        """Print connected message. Does not print if
+        reconnecting from expired socket"""
+        if not self.reconnecting:
+            print ('Connected. Press Ctrl+c twice to quit.\n')
+            print (colorama.Style.BRIGHT + self.title)
+            print (self.description + colorama.Style.RESET_ALL)
+            print ('Feed status is: %s' % self.state)
 
     def run(self, debug=False):
         """Get the websocket URL and connect to it and start the process"""
@@ -81,7 +85,8 @@ class Clive(object):
         socket_url = self.socket_url()
 
         websocket.enableTrace(debug)
-        ws = websocket.WebSocketApp(socket_url, on_message=self.on_message,
+        ws = websocket.WebSocketApp(socket_url,
+                                    on_message=self.on_message,
                                     on_close=self.on_close,
                                     on_error=self.on_error,
                                     on_open=self.on_open)
@@ -107,20 +112,3 @@ class Clive(object):
         self.description = data['description']
         self.state = data['state']
         return unescape(data['websocket_url'])
-
-
-if __name__ == '__main__':
-    """Given a feed name will start a listening socket and print new posts
-    as they arrive. The name is the last part of the live feed URL:
-        https://www.reddit.com/live/wmk50bsm9vt3
-
-    in this case: wmk50bsm9vt3"""
-
-    if len(sys.argv) < 2:
-        print ('You need to provide the name of the feed. Eg: wmk50bsm9vt3')
-        sys.exit(0)
-
-    feed = sys.argv[1]= 'wmk50bsm9vt3'
-    clive = Clive(feed)
-    clive.run()
-
