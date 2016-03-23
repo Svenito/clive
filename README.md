@@ -18,7 +18,6 @@ Requirements
 * colorama==0.3.7
 * html==1.16
 * requests==2.9.1
-* six==1.10.0
 * websocket-client==0.35.0
 
 Installation
