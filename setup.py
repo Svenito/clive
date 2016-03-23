@@ -9,14 +9,15 @@ except ImportError:
 
 setup(
     name='CLIve',
-    version='0.0.6',
+    version='0.0.7',
     author='Sven Steinbauer',
     author_email='sven@unlogic.co.uk',
     maintainer='Sven Steinbauer',
     packages=['clive'],
     scripts=['bin/clive'],
-    url='https://github.com/Svenito/clive',
+    url='https://svenito.github.io/clive/',
     license='MIT',
+    keywords=['reddit', 'live', 'news', 'stream'],
     description='Follow Reddit live feeds from your terminal.',
     long_description=open('README.md').read(),
     install_requires=requires,
