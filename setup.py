@@ -1,8 +1,15 @@
-from distutils.core import setup
+from setuptools import setup
+
+
+requires = ['colorama', 'requests', 'websocket-client']
+try:
+    import html
+except ImportError:
+    requires.append('html')
 
 setup(
     name='CLIve',
-    version='0.0.5',
+    version='0.0.6',
     author='Sven Steinbauer',
     author_email='sven@unlogic.co.uk',
     maintainer='Sven Steinbauer',
@@ -12,13 +19,5 @@ setup(
     license='MIT',
     description='Follow Reddit live feeds from your terminal.',
     long_description=open('README.md').read(),
-    install_requires=[
-		"colorama",
-		"requests",
-		"websocket-client"
-    ],
-    extras_require={
-        'python_version == "2.7"':[
-            'html',],
-        },
+    install_requires=requires
 )

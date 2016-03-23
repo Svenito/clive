@@ -78,7 +78,8 @@ class Clive(object):
             print ('Connected. Press Ctrl+c twice to quit.\n')
             print (colorama.Style.BRIGHT + self.title)
             print (self.description + colorama.Style.RESET_ALL)
-            print ('Feed status is: %s' % self.state)
+            print ('\nFeed status is: %s\n' % self.state)
+
 
     def run(self, debug=False):
         """Get the websocket URL and connect to it and start the process"""
@@ -116,4 +117,8 @@ class Clive(object):
         self.title = data['title']
         self.description = data['description']
         self.state = data['state']
+        if self.state == 'complete':
+            print ('Feed is complete. Cannot connect')
+            sys.exit(0)
+
         return unescape(data['websocket_url'])
