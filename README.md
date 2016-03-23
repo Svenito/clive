@@ -1,6 +1,10 @@
 CLIVE
 #####
 
+[![PyPI](https://img.shields.io/pypi/l/Django.svg)](https://pypi.python.org/pypi/CLIve)
+[![PyPI](https://img.shields.io/pypi/v/nine.svg)]([![PyPI](https://img.shields.io/pypi/l/Django.svg)](https://pypi.python.org/pypi/CLIve))
+[![PyPI](https://img.shields.io/pypi/dm/Django.svg)]([![PyPI](https://img.shields.io/pypi/dw/Django.svg)]([![PyPI](https://img.shields.io/pypi/v/nine.svg)]([![PyPI](https://img.shields.io/pypi/l/Django.svg)](https://pypi.python.org/pypi/CLIve))))
+
 When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
 
