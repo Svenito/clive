@@ -1,4 +1,4 @@
-#!/bin/env python2.7
+#!/usr/bin/env python
 
 import signal
 import requests
@@ -8,8 +8,11 @@ import colorama
 import textwrap
 import websocket
 import datetime
-from HTMLParser import HTMLParser
-unescape = HTMLParser().unescape
+try:
+    from HTMLParser import HTMLParser
+    unescape = HTMLParser().unescape
+except ImportError:
+    from html import unescape
 
 
 class Clive(object):
