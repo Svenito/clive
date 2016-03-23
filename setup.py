@@ -14,9 +14,11 @@ setup(
     long_description=open('README.md').read(),
     install_requires=[
 		"colorama",
-		"html",
 		"requests",
-		"six",
 		"websocket-client"
     ],
+    extras_require={
+        'python_version == "2.7"':[
+            'html',],
+        },
 )
