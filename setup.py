@@ -19,5 +19,20 @@ setup(
     license='MIT',
     description='Follow Reddit live feeds from your terminal.',
     long_description=open('README.md').read(),
-    install_requires=requires
+    install_requires=requires,
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: MacOS :: MacOS X',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Topic :: Internet',
+          ],
+
+
 )
