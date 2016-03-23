@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import argparse
 import clive
 import sys
 
@@ -9,12 +10,18 @@ import sys
     https://www.reddit.com/live/wmk50bsm9vt3
 
    in this case: wmk50bsm9vt3"""
+parser = argparse.ArgumentParser(description='''Follow Reddit live feeds
+        from the comfort of your terminal''')
+parser.add_argument('--width', '-w', dest='text_width', default=70,
+        help='Set the maximum textwidth of feed. Default 70')
 
-if len(sys.argv) < 2:
+args, remain = parser.parse_known_args()
+
+if len(remain) < 1:
     print ('You need to provide the name of the feed. Eg: wmk50bsm9vt3')
     sys.exit(0)
 
-feed = sys.argv[1]
+feed = remain[0]
 
-cli = clive.Clive(feed)
+cli = clive.Clive(feed, args.text_width)
 cli.run()

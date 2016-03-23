@@ -16,8 +16,9 @@ except ImportError:
 
 
 class Clive(object):
-    def __init__(self, feed_name):
+    def __init__(self, feed_name, text_width=70):
         self.feed_name = feed_name
+        self.text_width = text_width
         self.user_agent = 'CLI:clive by /u/tame_robot'
         self.quitting = False
         self.reconnecting = False
@@ -36,7 +37,7 @@ class Clive(object):
         """Print a new item to the terminal formatted to 70chars width"""
         body = item['body']
         body.replace('\t', '\n')
-        body = textwrap.wrap(body)
+        body = textwrap.wrap(body, self.text_width)
         formatted_body = '\n'.join(body)
 
         timestamp = item['created_utc']
