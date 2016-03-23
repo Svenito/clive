@@ -98,12 +98,16 @@ class Clive(object):
         r = requests.get('http://www.reddit.com/live/%s/about.json' %
                          self.feed_name, headers=headers)
 
+        error = False
         if r.status_code != 200:
-            sys.exit(0)
+            error = True
 
         try:
             about = r.json()
         except ValueError:
+            error = True
+
+        if error:
             print ('Failed to get websocket address for feed')
             sys.exit(1)
 
