@@ -5,7 +5,7 @@ When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
 
 So I started to write a command line interface that prints messages
-as they arrive. It's still **very** rough as I put this together in a few
+as they arrive. It's still a **little** rough as I put this together in a few
 hours, so consider it a work in progress. Contributions and suggestions
 welcome and encouraged.
 
