@@ -1,5 +1,9 @@
-CLIVE [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/binaryheadache)
+CLIVE
 =====
+
+[![PyPI Version] (https://img.shields.io/pypi/v/CLIve.svg)](https://pypi.python.org/pypi/CLIve)
+[![PyPI](https://img.shields.io/pypi/l/CLIve.svg)](https://pypi.python.org/pypi/CLIve)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/binaryheadache)
 
 When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
@@ -9,7 +13,7 @@ as they arrive. It's still a **little** rough as I put this together in a few
 hours, so consider it a work in progress. Contributions and suggestions
 welcome and encouraged.
 
-If you are wondering why *clive* it's a  blend of *cli* and *live*.
+If you are wondering why *clive*, it's a  blend of *cli* and *live*.
 
 Requirements
 ------------
@@ -23,7 +27,7 @@ Requirements
 Installation
 ------------
 
-$> pip install clive
+    $ pip install clive
 
 Usage
 -----
