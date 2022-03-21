@@ -1,9 +1,8 @@
 CLIVE
 =====
 
-[![PyPI Version] (https://img.shields.io/pypi/v/CLIve.svg)](https://pypi.python.org/pypi/CLIve)
+[![PyPI Version](https://img.shields.io/pypi/v/clive)](https://pypi.python.org/pypi/CLIve)
 [![PyPI](https://img.shields.io/pypi/l/CLIve.svg)](https://pypi.python.org/pypi/CLIve)
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/binaryheadache)
 
 When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
