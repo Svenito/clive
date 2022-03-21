@@ -1,4 +1,0 @@
-colorama==0.3.7
-html==1.16 ; python_version <= '2.7'
-requests==2.20.0
-websocket-client==0.35.0

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "clive"
+version = "0.1.0"
+description = "Follow Reddit live feeds from the comfort of the CLIS"
+authors = ["Sven Steinbauer <sven@unlogic.co.uk>"]
+repository = "https://github.com/Svenito/clive"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+colorama = "^0.4.4"
+requests = "^2.27.1"
+websocket-client = "^1.3.1"
+
+[tool.poetry.scripts]
+clive = 'clive.cli:run'
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
