@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "clive"
-version = "0.1.1"
+version = "0.1.2"
 description = "Follow Reddit live feeds from the comfort of the CLIS"
 authors = ["Sven Steinbauer <sven@unlogic.co.uk>"]
 repository = "https://github.com/Svenito/clive"

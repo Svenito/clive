@@ -28,6 +28,8 @@ class Clive(object):
         self.description = ''
         self.state = ''
 
+        colorama.init()
+
     def signal_handler(self, signal, frame):
         '''Handle CTRL+C to stop reconnection'''
         self.quitting = True
