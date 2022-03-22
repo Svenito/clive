@@ -2,7 +2,7 @@ CLIVE
 =====
 
 [![PyPI Version](https://img.shields.io/pypi/v/clive)](https://pypi.python.org/pypi/CLIve)
-[![PyPI](https://img.shields.io/pypi/l/CLIve.svg)](https://pypi.python.org/pypi/CLIve)
+[![PyPI](https://img.shields.io/pypi/l/clive)](https://pypi.python.org/pypi/CLIve)
 
 When following a Reddit live feed, who wants to have a big ugly webpage open
 all the time? Not me, and perhaps not you either.
