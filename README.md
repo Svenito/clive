@@ -14,14 +14,6 @@ welcome and encouraged.
 
 If you are wondering why *clive*, it's a  blend of *cli* and *live*.
 
-Requirements
-------------
-
-* Python 2.7 or 3.5
-* colorama==0.3.7
-* html==1.16
-* requests==2.9.1
-* websocket-client==0.35.0
 
 Installation
 ------------
